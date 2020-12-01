@@ -1,0 +1,35 @@
+package com.example.katalogsmartphone;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity10 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main10);
+
+        Button bt_sebelumnya = findViewById(R.id.bt_Sebelumnya);
+        bt_sebelumnya.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity10.this, MainActivity9.class);
+                startActivity(intent);
+            }
+        });
+
+        Button bt_pertama = findViewById(R.id.bt_pertama);
+        bt_pertama.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity10.this, MainActivity8.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
